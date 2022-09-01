@@ -33,14 +33,14 @@ const InputFile = styled('input')(({ theme }) => ({
 }))
 
 
-const TextareaBasic = () => {
+const TextareaBasic = ({onChange}:{onChange:any}) => {
   return (
     <>
       <ImageBox >
           <Center >
           <CameraImage sx={{color:'#3b3d54',fontSize:'2.5rem'}}/>
           </Center>
-        <InputFile id='upload' className='file-upload__input' type='file' name='file-upload' />
+        <InputFile onChange={onChange} id='upload' className='file-upload__input' type='file' name='file-upload' />
       </ImageBox>
     </>
   )
